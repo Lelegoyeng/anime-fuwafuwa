@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
+import { Link } from 'react-router-dom';
 
 const DetailAnime = () => {
     const location = useLocation();
@@ -71,26 +72,39 @@ const DetailAnime = () => {
                     </div>
 
                     <div className='text-gray-300'>
-                        <div className='flex justify-between text-gray-200 bg-blue-500 px-3 mt-1 mb-2 rounded cursor-pointer hover:bg-blue-800 transition-colors duration-300 ease-in-out'>
+                        <Link
+                            to={{
+                                pathname: '/streamingAnime',
+                            }}
+                            className='flex justify-between text-gray-200 bg-blue-500 px-3 mt-1 mb-2 rounded cursor-pointer hover:bg-blue-800 transition-colors duration-300 ease-in-out'
+                        >
                             <div className='text-left font-bold'>
                                 Episode 1
                             </div>
                             <div className='text-sm'>13 Oktober 2023</div>
-                        </div>
-
-                        <div className='flex justify-between text-gray-200 bg-blue-500 px-3 mt-1 mb-2 rounded cursor-pointer hover:bg-blue-800 transition-colors duration-300 ease-in-out'>
+                        </Link>
+                        <Link
+                            to={{
+                                pathname: '/streamingAnime',
+                            }}
+                            className='flex justify-between text-gray-200 bg-blue-500 px-3 mt-1 mb-2 rounded cursor-pointer hover:bg-blue-800 transition-colors duration-300 ease-in-out'
+                        >
                             <div className='text-left font-bold'>
                                 Episode 1
                             </div>
                             <div className='text-sm'>13 Oktober 2023</div>
-                        </div>
-
-                        <div className='flex justify-between text-gray-200 bg-blue-500 px-3 mt-1 mb-2 rounded cursor-pointer hover:bg-blue-800 transition-colors duration-300 ease-in-out'>
+                        </Link>
+                        <Link
+                            to={{
+                                pathname: '/streamingAnime',
+                            }}
+                            className='flex justify-between text-gray-200 bg-blue-500 px-3 mt-1 mb-2 rounded cursor-pointer hover:bg-blue-800 transition-colors duration-300 ease-in-out'
+                        >
                             <div className='text-left font-bold'>
                                 Episode 1
                             </div>
                             <div className='text-sm'>13 Oktober 2023</div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>
