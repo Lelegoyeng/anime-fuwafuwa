@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-
+import { AnimatePresence, motion } from 'framer-motion'
 
 
 const OngoingList = [
@@ -146,8 +146,15 @@ const Home = () => {
                                         title: get?.title
                                     }}
                                 >
-                                    <img className='rounded-lg' src={get?.media} alt={`slide-${index}`} />
-                                    <div className='text-white font-semibold text-lg mt-2'>{get?.title}</div>
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 1 }}
+                                        layout
+                                    >
+                                        <img className='rounded-lg hover:scale-110 duration-700 ease-in-out' src={get?.media} alt={`slide-${index}`} />
+                                        <div className='text-white font-semibold text-lg mt-2'>{get?.title}</div>
+                                    </motion.div>
                                 </Link>
 
                             </SwiperSlide>
@@ -190,8 +197,15 @@ const Home = () => {
                                         title: get?.title
                                     }}
                                 >
-                                    <img className='rounded-lg' src={get?.media} alt={`slide-${index}`} />
-                                    <div className='text-white font-semibold text-lg mt-2'>{get?.title}</div>
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 1 }}
+                                        layout
+                                    >
+                                        <img className='rounded-lg hover:scale-110 duration-700 ease-in-out' src={get?.media} alt={`slide-${index}`} />
+                                        <div className='text-white font-semibold text-lg mt-2'>{get?.title}</div>
+                                    </motion.div>
                                 </Link>
 
                             </SwiperSlide>

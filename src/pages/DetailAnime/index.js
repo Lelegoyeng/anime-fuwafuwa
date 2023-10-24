@@ -76,6 +76,10 @@ const DetailAnime = () => {
                             to={{
                                 pathname: '/streamingAnime',
                             }}
+                            state={{
+                                media: media,
+                                title: title
+                            }}
                             className='flex justify-between text-gray-200 bg-blue-500 px-3 mt-1 mb-2 rounded cursor-pointer hover:bg-blue-800 transition-colors duration-300 ease-in-out'
                         >
                             <div className='text-left font-bold'>
