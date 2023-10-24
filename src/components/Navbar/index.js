@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.png';
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const { statePage } = props;
+
+    const [linkpage, SetLinkPage] = useState(null)
+
+    useEffect(() => {
+        SetLinkPage(statePage);
+    }, [statePage])
 
     return (
         <div className="Navbar">
