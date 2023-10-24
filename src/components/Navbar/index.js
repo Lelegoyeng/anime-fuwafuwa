@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.png';
+import { Link } from 'react-router-dom';
 
-const Navbar = (props) => {
-    const { statePage } = props;
-
-    const [linkpage, SetLinkPage] = useState(null)
-
-    useEffect(() => {
-        SetLinkPage(statePage);
-    }, [statePage])
-
+const Navbar = () => {
     return (
         <div className="Navbar">
             <div className="bg-black text-white p-4 flex flex-col md:flex-row items-center justify-between">
                 {/* Logo and App Name */}
-                <div className="flex items-center mb-4 md:mb-0">
-                    <img src={logo} alt="Logo" className="h-8 w-8" />
-                    <span className="ml-2 text-lg font-bold">Anime Fuwafuwa</span>
+                <div>
+                    <Link
+                        className="flex items-center mb-4 md:mb-0"
+                        to={{
+                            pathname: '/',
+
+                        }}
+                    >
+                        <img src={logo} alt="Logo" className="h-8 w-8" />
+                        <span className="ml-2 text-lg font-bold">Anime Fuwafuwa</span>
+                    </Link>
+
                 </div>
 
                 {/* Centered Search Input */}
@@ -43,6 +45,11 @@ const Navbar = (props) => {
                     {/* Button for Ongoing */}
                     <button type="button" className="text-gray-300 hover:text-white"> {/* Tambahkan hover disini */}
                         Ongoing
+                    </button>
+
+                    {/* Button for Completed */}
+                    <button type="button" className="text-gray-300 hover:text-white"> {/* Tambahkan hover disini */}
+                        Completed
                     </button>
                 </div>
 

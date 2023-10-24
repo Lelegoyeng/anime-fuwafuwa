@@ -2,12 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 
-const DetailAnime = () => {
-    const location = useLocation();
-
-    const { state } = location;
-    const media = state?.media;
-    const title = state?.title;
+const StreamingAnime = () => {
 
     return (
         <div>
@@ -16,17 +11,17 @@ const DetailAnime = () => {
 
                 <div className=' bg-black p-5 rounded'>
                     <div className=' mb-2 bg-blue-900 text-center text-white p-1 rounded font-bold '>
-                        {title} Subtitle Indonesia
+                        Title Episode 1 Subtitle Indonesia
                     </div>
-                    <div className='mb-3 text-gray-300 text-left font-bold text-lg'>Streaming {title} </div>
+                    <div className='mb-3 text-gray-300 text-left font-bold text-lg'>Streaming  </div>
                     <div className='flex flex-col gap-5 md:flex-row'>
                         <div className='mr-5'>
-                            {media && <img className='mx-auto rounded' src={media} alt={`Anime Media`} />}
+                            aaaa
                         </div>
                         <div className='w-full'>
                             <div className='flex justify-between gap-1'>
                                 <div className='text-left text-gray-300 font-bold w-2/12'>Judul</div>
-                                <div className='text-left text-gray-300 font-bold w-10/12'> : {title} </div>
+                                <div className='text-left text-gray-300 font-bold w-10/12'> :  </div>
                             </div>
                             <div className='flex justify-between gap-1'>
                                 <div className='text-left text-gray-300 font-bold w-2/12'>Japanese</div>
@@ -67,7 +62,7 @@ const DetailAnime = () => {
                         </div>
                     </div>
                     <div className='mt-5 mb-2 bg-gray-600 text-white p-1 rounded font-bold'>
-                        {title} Episode List
+                        Episode List
                     </div>
 
                     <div className='text-gray-300'>
@@ -99,4 +94,4 @@ const DetailAnime = () => {
     );
 }
 
-export default DetailAnime;
+export default StreamingAnime;

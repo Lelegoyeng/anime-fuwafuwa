@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Ongoing from './pages/Ongoing';
 import DetailAnime from './pages/DetailAnime';
+import StreamingAnime from './pages/StreamingAnime';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
         <Route
           path="/detailAnime"
           element={<DetailAnime />}
+        />
+        <Route
+          path="/streamingAnime"
+          element={<StreamingAnime />}
         />
       </Routes>
     </Router>
