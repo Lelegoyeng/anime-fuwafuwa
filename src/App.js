@@ -6,6 +6,7 @@ import Ongoing from './pages/Ongoing';
 import DetailAnime from './pages/DetailAnime';
 import StreamingAnime from './pages/StreamingAnime';
 import GenreList from './pages/GenreList';
+import GenreListAnime from './pages/GenreList-Anime';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
         <Route
           path="/genreList"
           element={<GenreList />}
+        />
+        <Route
+          path="/genreList/Anime"
+          element={<GenreListAnime />}
         />
       </Routes>
     </Router>
