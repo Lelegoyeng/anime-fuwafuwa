@@ -32,23 +32,30 @@ const Navbar = () => {
 
                 {/* Options in the Top Right Corner */}
                 <div className="flex items-center space-x-4 relative">
-                    {/* Button for Anime List */}
-                    <button type="button" className="text-gray-300 hover:text-white "> {/* Tambahkan hover disini */}
-                        Genre List
-                    </button>
+                    <Link
+                        to={{
+                            pathname: '/genreList',
+
+                        }}
+                    >
+                        {/* Button for Anime List */}
+                        <button type="button" className="text-gray-300 hover:text-white ">
+                            Genre List
+                        </button>
+                    </Link>
 
                     {/* Button for Anime List */}
-                    <button type="button" className="text-gray-300 hover:text-white "> {/* Tambahkan hover disini */}
+                    <button type="button" className="text-gray-300 hover:text-white ">
                         Anime List
                     </button>
 
                     {/* Button for Ongoing */}
-                    <button type="button" className="text-gray-300 hover:text-white"> {/* Tambahkan hover disini */}
+                    <button type="button" className="text-gray-300 hover:text-white">
                         Ongoing
                     </button>
 
                     {/* Button for Completed */}
-                    <button type="button" className="text-gray-300 hover:text-white"> {/* Tambahkan hover disini */}
+                    <button type="button" className="text-gray-300 hover:text-white">
                         Completed
                     </button>
                 </div>
